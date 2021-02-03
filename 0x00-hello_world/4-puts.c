@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
- * This is the puts function as asked in the task 4.Hello, puts,
- * as asked in the project 0x00.C-Hello, World.
+/**
+ * main - Main function
+ * Return: After printing, return 0
  */
 
 int main(void)
