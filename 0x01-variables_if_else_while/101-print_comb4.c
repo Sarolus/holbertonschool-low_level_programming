@@ -26,9 +26,9 @@ int main(void)
 				{
 					putchar(hund + 48);
 					putchar(tens + 48);
-					putchar(unity + 48);
+					putchar(unit + 48);
 
-					if (hund * 100 + tens * 10 + unity != 789)
+					if (hund * 100 + tens * 10 + unit != 789)
 					{
 						putchar(',');
 						putchar(' ');
@@ -37,6 +37,8 @@ int main(void)
 			}
 		}
 	}
+
+	putchar('\n');
 
 	return (0);
 }
