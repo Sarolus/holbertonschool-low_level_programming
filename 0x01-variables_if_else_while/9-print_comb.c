@@ -7,13 +7,13 @@
 
 int main(void)
 {
-	char digit;
-	char space;
+	int digit;
+	int space;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	for (digit = 48; digit <= 57; digit++)
 	{
 		putchar(digit);
-		if (digit != '9')
+		if (digit != 57)
 		{
 				putchar(',');
 				putchar(' ');
