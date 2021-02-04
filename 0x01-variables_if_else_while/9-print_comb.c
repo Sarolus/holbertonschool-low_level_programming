@@ -8,7 +8,6 @@
 int main(void)
 {
 	int digit;
-	int space;
 
 	for (digit = 48; digit <= 57; digit++)
 	{
