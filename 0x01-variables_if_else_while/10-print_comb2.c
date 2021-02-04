@@ -8,7 +8,6 @@
 int main(void)
 {
 	int digit;
-	char space;
 
 	for (digit = 0; digit < 100 ; digit++)
 	{
