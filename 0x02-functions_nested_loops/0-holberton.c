@@ -2,7 +2,6 @@
 
 /**
  * main - Write the specified character
- * @c: The character to print
  *
  * Return: Always return 0.
  */
