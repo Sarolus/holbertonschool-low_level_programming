@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
+ * _abs - compute absolute value
+ * @prmNumber: Parameter number
+ * Return: Return result
  */
 
 int _abs(int prmNumber)
