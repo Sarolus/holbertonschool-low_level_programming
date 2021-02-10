@@ -9,13 +9,14 @@
 int print_last_digit(int prmN)
 {
 	int result;
+
+	result = prmN % 10;
+	if (prmN < 0)
 	{
-		result = prmN % 10;
-		if (prmN < 0)
-		{
-			result = prmN * -1;
-		}
+		result = prmN * -1
 	}
+
+	_putchar(result + '0');
 
 	return (result);
 }
