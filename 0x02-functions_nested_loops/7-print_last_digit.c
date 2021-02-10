@@ -11,9 +11,9 @@ int print_last_digit(int prmN)
 	int result;
 
 	result = prmN % 10;
-	if (prmN < 0)
+	if (result < 0)
 	{
-		result = prmN * -1
+		result = result * -1
 	}
 
 	_putchar(result + '0');
