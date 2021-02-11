@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_line - Draw a straight line in the terminal
+ * print_diagonal - Draw a straight line in the terminal
  * @n: number of times the character is printed
  */
 
