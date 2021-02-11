@@ -3,7 +3,6 @@
 /**
  * main - Print numbers from 1 to 100 replacing multiples of five and three
  * by words.
- * @nb: number to print
  * Return: return 0
  */
 
