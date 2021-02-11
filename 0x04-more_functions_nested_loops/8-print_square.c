@@ -10,14 +10,19 @@ void print_square(int size)
 	int loop1;
 	int loop2;
 
-	for (loop1 = 0; loop1 < size; loop1++)
+	if (size > 0)
 	{
-		_putchar('\n');
-		for (loop2 = 0; loop2 < size; loop2++)
+		for (loop1 = 0; loop1 < size; loop1++)
 		{
-			_putchar('#');
+			for (loop2 = 0; loop2 < size; loop2++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
 	}
-
-	_putchar('\n');
+	else if (size == 0)
+	{
+		_putchar('\n');
+	}
 }
