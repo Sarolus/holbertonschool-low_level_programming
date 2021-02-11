@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
- * main - Fizzbuzzing
+ * main - Print numbers from 1 to 100 replacing multiples of five and three
+ * by words.
  * @nb: number to print
  * Return: return 0
  */
@@ -11,7 +11,7 @@ int main(int nb)
 {
 	for (nb = 1; nb <= 100; nb++)
 	{
-		if (nb != 1 && nb != 100)
+		if (nb != 1)
 		{
 			putchar(' ');
 		}
