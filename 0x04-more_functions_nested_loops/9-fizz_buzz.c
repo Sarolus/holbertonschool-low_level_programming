@@ -11,21 +11,26 @@ int main(int nb)
 {
 	for (nb = 1; nb <= 100; nb++)
 	{
+		if (nb != 1 && nb != 100)
+		{
+			putchar(' ');
+		}
+
 		if (nb % 3 == 0 && nb % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (nb % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if (nb % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", nb);
+			printf("%d", nb);
 		}
 	}
 	putchar('\n');
