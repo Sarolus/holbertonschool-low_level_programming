@@ -7,8 +7,10 @@
  * Return: return 0
  */
 
-int main(int nb)
+int main(void)
 {
+	int nb;
+
 	for (nb = 1; nb <= 100; nb++)
 	{
 		if (nb != 1)
