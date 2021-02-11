@@ -20,7 +20,7 @@ void print_diagonal(int n)
 				{
 					_putchar(92);
 				}
-				else
+				else if (loop2 <= loop1)
 				{
 					_putchar(' ');
 				}
