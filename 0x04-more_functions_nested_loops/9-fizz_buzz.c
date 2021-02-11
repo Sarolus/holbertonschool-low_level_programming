@@ -2,6 +2,7 @@
 
 /**
  * main - Fizzbuzzing
+ * @nb: number to print
  * Return: return 0
  */
 
