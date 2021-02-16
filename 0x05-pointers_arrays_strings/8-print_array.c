@@ -7,7 +7,7 @@
  * @n: array element
  */
 
-void print_array(int *a, int n)
+void print_array(int *arr, int n)
 {
 	int length;
 
@@ -15,11 +15,11 @@ void print_array(int *a, int n)
 	{
 		if (length != 0)
 		{
-			printf(", %d", a[length]);
+			printf(", %d", arr[length]);
 		}
 		else
 		{
-			printf("%d", a[length]);
+			printf("%d", arr[length]);
 		}
 	}
 	printf("\n");
