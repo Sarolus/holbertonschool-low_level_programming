@@ -18,7 +18,7 @@ int _atoi(char *str)
 		length++;
 	}
 
-	for (length; str[length] != '\0'; length++)
+	for (length = 0; str[length] != '\0'; length++)
 	{
 		if (str[length] >= '0' && str[length] <= '9')
 		{
