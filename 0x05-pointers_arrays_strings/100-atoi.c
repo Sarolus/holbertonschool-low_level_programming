@@ -19,7 +19,14 @@ int _atoi(char *str)
 
 	for (length = 0; str[length] != '\0'; length++)
 	{
-		result = ((result * 10) + (str[length] - '0'));
+		if (str[length] >= '0' && str[length] <= '9')
+		{
+			result = ((result * 10) + (str[length] - '0'));
+		}
+		else if (result > 0)
+		{
+			break;
+		}
 	}
 
 	return (symbol * result);
