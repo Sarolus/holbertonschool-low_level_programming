@@ -8,28 +8,25 @@
 
 int _atoi(char *str)
 {
-	int result = 0;
+	unsigned int result = 0;
 	int symbol = 1;
 	int length = 0;
 
-	if (str[length] == '-')
-	{
-		symbol *= -1;
-		length++;
-	}
-
 	for (length = 0; str[length] != '\0'; length++)
 	{
-		if (str[length] >= '0' && str[length] <= '9')
+		if (str[length] == '-')
 		{
-			result = ((result * 10) + (str[length] - '0'));
+			symbol *= -1;
+		}
+		else if (str[length] >= '0' && str[length] <= '9')
+		{
+			result = ((result * 10) + str[length]) - '0';
 		}
 		else if (result > 0)
 		{
 			break;
 		}
 	}
-	result *= symbol;
 
-	return (result);
+	return (result * symbol);
 }
