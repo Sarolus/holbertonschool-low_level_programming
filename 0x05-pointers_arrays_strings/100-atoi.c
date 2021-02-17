@@ -10,14 +10,15 @@ int _atoi(char *str)
 {
 	int result = 0;
 	int symbol = 1;
-	int length;
+	int length = 0;
 
-	if (str[0] == '-')
+	if (str[length] == '-')
 	{
 		symbol *= -1;
+		length++;
 	}
 
-	for (length = 0; str[length] != '\0'; length++)
+	for (length; str[length] != '\0'; length++)
 	{
 		if (str[length] >= '0' && str[length] <= '9')
 		{
@@ -28,6 +29,7 @@ int _atoi(char *str)
 			break;
 		}
 	}
+	result *= symbol;
 
-	return (symbol * result);
+	return (result);
 }
