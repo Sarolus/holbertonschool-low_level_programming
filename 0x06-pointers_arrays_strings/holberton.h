@@ -35,3 +35,8 @@ char *_strcpy(char *dest, char *src);
 int _atoi(char *str);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int size);
+char *_strncpy(char *dest, char *src, int size);
+int _strcmp(char *src1, char *src2);
+void reverse_array(int *arr, int elem);
+char *string_toupper(char *);
+char *cap_string(char *);

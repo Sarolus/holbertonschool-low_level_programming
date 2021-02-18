@@ -28,12 +28,9 @@ char *_strncat(char *dest, char *src, int size)
 {
 	char *end = dest + _strlen(dest);
 
-	while (size--)
+	while (*src != '\0' && size--)
 	{
-		if (!(*end++ = *src++))
-		{
-			return (dest);
-		}
+		*end++ = *src++;
 	}
 
 	*end = '\0';
