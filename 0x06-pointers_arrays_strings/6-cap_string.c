@@ -53,6 +53,14 @@ char *cap_string(char *str)
 			{
 				str[index] -= 32;
 			}
+			else if (str[index - 1] >= 58 && str[index - 1] <= 64)
+			{
+				str[index] -= 32;
+			}
+			else if (str[index - 1] >= 123 && str[index - 1] <= 126)
+			{
+				str[index] -= 32;
+			}
 		}
 	}
 
