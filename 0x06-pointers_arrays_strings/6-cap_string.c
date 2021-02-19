@@ -49,15 +49,31 @@ char *cap_string(char *str)
 	{
 		if (_isalpha(str[index]))
 		{
-			if (str[index - 1] >= 0 && str[index - 1] <= 47)
+			if (str[index - 1] == ' ' && str[index - 1] == '\t')
 			{
 				str[index] -= 32;
 			}
-			else if (str[index - 1] >= 58 && str[index - 1] <= 64)
+			else if (str[index - 1] == '\n' && str[index - 1] == ',')
 			{
 				str[index] -= 32;
 			}
-			else if (str[index - 1] >= 123 && str[index - 1] <= 126)
+			else if (str[index - 1] == ';' && str[index - 1] == '.')
+			{
+				str[index] -= 32;
+			}
+			else if (str[index - 1] == '!' && str[index - 1] == '?')
+			{
+				str[index] -= 32;
+			}
+			else if (str[index - 1] == '"' && str[index - 1] == '(')
+			{
+				str[index] -= 32;
+			}
+			else if (str[index - 1] == ')' && str[index - 1] == '{')
+			{
+				str[index] -= 32;
+			}
+			else if (str[index - 1] == '}')
 			{
 				str[index] -= 32;
 			}
