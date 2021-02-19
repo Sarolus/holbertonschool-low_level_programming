@@ -45,8 +45,12 @@ char *cap_string(char *str)
 	int index;
 	int length = _strlen(str);
 
-	for (index = 1; index < length; index++)
+	for (index = 0; index < length; index++)
 	{
+		if (_isalpha(str[0] == 1))
+		{
+			str[0] -= 32;
+		}
 		if (_isalpha(str[index]))
 		{
 			if (str[index - 1] >= 0 && str[index - 1] <= 44 && str[index - 1] != '!')
