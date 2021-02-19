@@ -4,21 +4,23 @@
  * _strncpy - Copy a string with specified size.
  * @src: source string
  * @dest: destination string
- * @size: maximum size to append.
+ * @limit: maximum size to append.
  * Return: Return result
  */
 
-char *_strncpy(char *dest, char *src, int size)
+char *_strncpy(char *dest, char *src, int limit)
 {
-	char *result = dest;
+	int length;
 
-	while (*src != '\0' && size--)
+	for (length = 0; src[length] != '\0' && length < limit; length++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[length] = src[length];
+	}
+	while (length < limit)
+	{
+		dest[length] = '\0';
+		length++;
 	}
 
-	*dest = '\0';
-	return (result);
+	return (dest);
 }
