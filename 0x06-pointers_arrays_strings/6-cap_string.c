@@ -49,7 +49,7 @@ char *cap_string(char *str)
 	{
 		if (_isalpha(str[index]))
 		{
-			if (str[index - 1] >= 0 && str[index - 1] <= 44)
+			if (str[index - 1] >= 0 && str[index - 1] <= 44 && str[index - 1] != '!')
 			{
 				str[index] -= 32;
 			}
