@@ -2,41 +2,24 @@
 #include <stddef.h>
 
 /**
- * _strcmp - Compare two strings
- * @s1 : source string
- * @s2 : source string
- * Return: return 1 if different, 0 if similar
- */
-
-int _strcmp(char *haystack, char *needle)
-{
-	while (*haystack && *needle)
-	{
-		if (*haystack != *needle)
-		{
-			return (0);
-		}
-
-		haystack++;
-		needle++;
-	}
-
-	return (*needle == '\0');
-}
-
-/**
- *
- *
+ * _strstr - locates a substring.
+ * @haystack: string
+ * @needle: substring
+ * Return: return located substring or NULL if not found
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack != '\0')
+	int i, j;
+
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if ((*haystack == *needle) && _strcmp(haystack, needle))
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			return (haystack);
-			haystack++;
+			if (haystack[i] == needle[0])
+			{
+				return (haystack + i);
+			}
 		}
 	}
 
