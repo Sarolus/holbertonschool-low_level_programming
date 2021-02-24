@@ -17,8 +17,11 @@ int _strlen_recursion(char *s)
 }
 
 /**
- *
- *
+ * pal_checker - Check from start to end the string
+ * @s: String
+ * @start: Start of the string
+ * @end: End of the string
+ * Return: Return 1 if the string is a palindrome or not if 0
  */
 
 int pal_checker(char *s, int start, int end)
@@ -37,8 +40,9 @@ int pal_checker(char *s, int start, int end)
 }
 
 /**
- *
- *
+ * is_palindrome - Return if a string is a palindrome or not
+ * @s: String
+ * Return: return the result of the pal_checker function
  */
 
 int is_palindrome(char *s)
