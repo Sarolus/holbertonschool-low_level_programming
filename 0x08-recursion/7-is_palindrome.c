@@ -26,7 +26,7 @@ int _strlen_recursion(char *s)
 
 int pal_checker(char *s, int start, int end)
 {
-	if (start == end)
+	if (s[start] >= s[end])
 	{
 		return (1);
 	}
