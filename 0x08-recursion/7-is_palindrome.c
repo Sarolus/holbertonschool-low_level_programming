@@ -26,11 +26,11 @@ int _strlen_recursion(char *s)
 
 int pal_checker(char *s, int start, int end)
 {
-	if (s[start] >= s[end])
+	if (start >= end)
 	{
 		return (1);
 	}
-	else if (s[start] != s[end])
+	else if (s[start] != s[end - 1])
 	{
 		return (0);
 	}
@@ -53,5 +53,5 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	return (pal_checker(s, 0, len - 1));
+	return (pal_checker(s, 0, len));
 }
