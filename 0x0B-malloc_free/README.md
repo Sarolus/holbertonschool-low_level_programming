@@ -1,0 +1,1 @@
+Automatic and dynamic allocation with malloc and free functions.
