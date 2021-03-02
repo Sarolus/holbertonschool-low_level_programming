@@ -3,8 +3,11 @@
 #include <stddef.h>
 
 /**
- *
- *
+ * alloc_grid - Returns a pointer to a 2 dimensional array of integers
+ * @width: width value
+ * @height: height value
+ * Return: return null if failure, null if parameters are <= 0, return the
+ * pointer to the dimensional array if true.
  */
 
 int **alloc_grid(int width, int height)
@@ -29,17 +32,16 @@ int **alloc_grid(int width, int height)
 
 		if (grid[li] == NULL)
 		{
-			free(grid[li]);
+			for (col = 0; col <= li; col++)
+			{
+				free(grid[col]);
+			}
 			free(grid);
 			return (NULL);
 		}
-	}
-
-	for (col = 0; col < width; col++)
-	{
-		for (li = 0; li < height; li++)
+		for (col = 0; col < width; col++)
 		{
-			grid[li][col] = 0;
+			grid[line][col] = 0;
 		}
 	}
 
