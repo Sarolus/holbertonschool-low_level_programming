@@ -3,8 +3,10 @@
 #include <stddef.h>
 
 /**
- *
- *
+ * create_array - creates an array of chars and init. it with a specific char
+ * @size: Specified size for malloc
+ * @c: Character
+ * Return: return pointer to the array or NULL if size = 0.
  */
 
 char *create_array(unsigned int size, char c)
