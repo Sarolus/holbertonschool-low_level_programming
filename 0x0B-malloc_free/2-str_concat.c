@@ -13,7 +13,7 @@ int _strlen(char *s)
 	int length;
 
 	length = 0;
-	while (s[length] != '\0')
+	while (s && s[length] != '\0')
 	{
 		length++;
 	}
@@ -33,16 +33,6 @@ char *str_concat(char *s1, char *s2)
 	int i, j;
 	char *dup;
 
-	if (s1 == NULL)
-	{
-		s1 = '\0';
-	}
-
-	if (s2 == NULL)
-	{
-		s2 = '\0';
-	}
-
 	dup = malloc((_strlen(s1) + (_strlen(s2) + 1)) * sizeof(char));
 
 	if (!dup)
@@ -58,7 +48,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		dup[i + j] = s2[j];
 	}
-	
 	dup[i + j] = '\0';
 
 	return (dup);
