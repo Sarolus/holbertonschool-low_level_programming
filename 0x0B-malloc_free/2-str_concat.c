@@ -30,7 +30,7 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, len1, len2;
+	int i, len1, len2;
 	char *dup;
 
 	if (s1 != NULL)
@@ -49,14 +49,15 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; i < len1; i++)
 	{
 		dup[i] = s1[i];
 	}
-	for (j = 0; s2[j] != '\0'; j++)
+	for (i = 0; i < len2; i++)
 	{
-		dup[i + j] = s2[j];
+		dup[i + len1] = s2[i];
 	}
+	dup[len1 + len2] = '\0';
 
 	return (dup);
 }
