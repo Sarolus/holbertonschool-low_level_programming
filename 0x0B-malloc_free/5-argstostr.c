@@ -9,9 +9,12 @@
  * Return: return the result or NULL if failed.
  */
 
-char *argstostr(int ac __attribute__((unused)), char **av __attribute__((unused)))
+char *argstostr(int ac, char **av)
 {
 	char *result;
+
+	ac = 0;
+	av = '\0';
 
 	result = 0;
 	if (ac == 0 || av == NULL)
