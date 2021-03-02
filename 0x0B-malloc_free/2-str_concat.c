@@ -44,11 +44,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		dup[i] = s1[i];
 	}
-	for (j = 0; s2[j] != '\0'; j++)
+	while (i < s1 + s2)
 	{
-		dup[i + j] = s2[j];
+		dup[i] = s2[j];
+		i++;
+		j++;
 	}
-	dup[i + j] = '\0';
+	dup[i] = '\0';
 
 	return (dup);
 }
