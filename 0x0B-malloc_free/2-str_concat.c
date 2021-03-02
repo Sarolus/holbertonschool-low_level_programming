@@ -30,15 +30,19 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j;
+	int i, j, len1, len2;
 	char *dup;
 
-	if (!s1 || !s2)
+	if (s1 != NULL)
 	{
-		return (NULL);
+		len1 = _strlen(s1);
+	}
+	if (s2 != NULL)
+	{
+		len2 = _strlen(s2);
 	}
 
-	dup = malloc((_strlen(s1) + (_strlen(s2) + 1)) * sizeof(char));
+	dup = malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (!dup)
 	{
