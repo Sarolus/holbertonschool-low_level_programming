@@ -33,6 +33,11 @@ char *str_concat(char *s1, char *s2)
 	int i, j;
 	char *dup;
 
+	if (!s1 || !s2)
+	{
+		return (NULL);
+	}
+
 	dup = malloc((_strlen(s1) + (_strlen(s2) + 1)) * sizeof(char));
 
 	if (!dup)
