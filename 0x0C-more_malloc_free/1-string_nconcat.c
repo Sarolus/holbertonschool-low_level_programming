@@ -3,9 +3,10 @@
 #include <stddef.h>
 
 /**
- * str_concat - Concatenate two strings.
+ * string_nconcat - Concatenate two strings with a size n.
  * @s1: First string
  * @s2: Second string
+ * @n: specified size
  * Return: return the dup (the two strings concatenates)
  */
 
