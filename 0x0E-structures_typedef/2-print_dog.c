@@ -4,8 +4,8 @@
 #include <stdio.h>
 
 /**
- *
- *
+ * print_dog - Prints a struct dog
+ * @d: Pointer to structure
  */
 
 void print_dog(struct dog *d)
