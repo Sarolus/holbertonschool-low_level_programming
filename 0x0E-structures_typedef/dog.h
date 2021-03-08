@@ -4,15 +4,15 @@
 /**
  * struct dog - our doggo structure
  * @name: doggo name
- * @owner: doggo owner
  * @age: doggo age
+ * @owner: doggo owner
  */
 
 struct dog
 {
 	char *name;
-	char *owner;
 	float age;
+	char *owner;
 };
 
-#endif /* DOGGO */
+#endif DOGGO
