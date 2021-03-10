@@ -26,11 +26,11 @@ int main(int argc, char *argv[])
 		exit (99);
 	}
 
-	if (argv[1] == 0 && argv[3] == 0)
-	{
-		printf("Error\n");
-		exit (100);
-	}
+	//if ()
+	//{
+	//	printf("Error\n");
+	//	exit (100);
+	//}
 
 	//print error if number of argument is wrong (exit 98)
 	//print error if operator wrong (exit 99)
