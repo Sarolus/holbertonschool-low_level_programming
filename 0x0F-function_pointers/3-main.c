@@ -17,17 +17,23 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	num1 = atoi(argv[1]);
-	num2 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	f = get_op_func(argv[2]);
 	if (f == NULL)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
+	}
+
+	if (num2 == 0 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	printf("%d\n", f(num1, num2));
