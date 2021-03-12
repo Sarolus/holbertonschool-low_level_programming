@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <stddef.h>
 
+typedef struct format
+{
+	char *form;
+	void (*f)(va_list);
+} form_t;
+
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
