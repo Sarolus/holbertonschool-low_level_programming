@@ -1,8 +1,8 @@
 #include "variadic_functions.h"
 
 /**
- *
- *
+ * print_char - Print a character
+ * @c: format parameter.
  */
 
 void print_char(va_list c)
@@ -11,7 +11,8 @@ void print_char(va_list c)
 }
 
 /**
- *
+ * print_integer - Print an integer
+ * @i: format parameter.
  *
  */
 
@@ -21,7 +22,8 @@ void print_integer(va_list i)
 }
 
 /**
- *
+ * print_float - Print a float
+ * @f: format parameter.
  *
  */
 
@@ -31,13 +33,14 @@ void print_float(va_list f)
 }
 
 /**
- *
- *
+ * print_string - Print a string
+ * @s: format paremeter.
  */
 
 void print_string(va_list s)
 {
 	char *string = va_arg(s, char *);
+
 	if (string == NULL)
 	{
 		string = "(nil)";
@@ -47,8 +50,8 @@ void print_string(va_list s)
 }
 
 /**
- *
- *
+ * print_all - print anything
+ * @format: the specified format parameter
  */
 
 void print_all(const char * const format, ...)
@@ -57,29 +60,33 @@ void print_all(const char * const format, ...)
 
 	unsigned int i = 0;
 	unsigned int j = 0;
+	char *separator = "";
 
-	form_t form[] = {
+	form_t forms[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
-		{"s", print_string}
+		{"s", print_string},
+		{NULL, NULL}
 	};
 
-	va_start (aprm, format);
+	va_start(aprm, format);
 
 	while (format && format[i])
 	{
 		while (j < 4)
 		{
-			if (format[i] == *form[j].form)
+			if (format[i] == *(forms[j]).form)
 			{
-				form[j].f(aprm);
-				printf(", ");
+				printf("%s", separator);
+				separator = ", ";
+				forms[j].f(aprm);
 			}
 			j++;
 		}
 		i++;
 	}
-
 	printf("\n");
+
+	va_end(aprm);
 }

@@ -4,10 +4,16 @@
 #include <stdio.h>
 #include <stddef.h>
 
+/**
+ * struct format - structure of our function pointer and paramters
+ * @form: format parameter
+ * @f: function pointer
+ */
+
 typedef struct format
 {
 	char *form;
-	void (*f)(va_list);
+	void (*f)();
 } form_t;
 
 int _putchar(char c);
