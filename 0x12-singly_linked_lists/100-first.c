@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void start (void) __attribute (constructor))
+void start (void) __attribute__ ((constructor));
 
 /**
  * start - constructor function to print before main function.
