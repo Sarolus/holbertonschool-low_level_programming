@@ -27,9 +27,9 @@ int _strlen(const char *s)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
-	list_t *i;
+	list_t *tmp;
 
-	i = *head;
+	tmp = *head;
 	if (head == NULL)
 	{
 		return (NULL);
@@ -52,11 +52,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (*head);
 	}
 
-	while (i->next != NULL)
+	while (tmp->next != NULL)
 	{
-		i = i->next;
+		tmp = tmp->next;
 	}
-	i->next = new;
+	tmp->next = new;
 
 	return (i);
 }
