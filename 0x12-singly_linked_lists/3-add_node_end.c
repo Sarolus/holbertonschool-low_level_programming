@@ -19,7 +19,7 @@ int _strlen(const char *s)
 
 /**
  * add_node_end - Adds a new node at the end of a list_t list.
- * @head: Beginning of our list_t
+ * @head: Beginning node of our list_t
  * @str: string parameter of list_t struct.
  * Return: return NULL if one of the parameters is NULL,
  * otherwise the address of the new element.
