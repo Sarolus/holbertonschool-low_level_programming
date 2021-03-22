@@ -16,7 +16,7 @@ void free_listint(listint_t *head)
 }
 
 /**
- * free_listint - Frees a listint_t list.
+ * free_listint2 - Frees a listint_t list.
  * @head: Beginning node of our list.
  */
 void free_listint2(listint_t **head)
