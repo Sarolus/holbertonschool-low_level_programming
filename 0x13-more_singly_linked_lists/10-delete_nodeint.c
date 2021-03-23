@@ -25,8 +25,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(h);
 		return (1);
 	}
-
-	if (index != 0)
+	else
 	{
 		while (h && i != (index - 1))
 		{
