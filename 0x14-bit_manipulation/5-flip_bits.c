@@ -11,13 +11,13 @@ int count(unsigned long int n)
 	{
 		return (0);
 	}
-	if ((n & 1) == 1)
+	if (n & 1)
 	{
-		return (count((n >> 1)) + 1);
+		return (count(n >> 1) + 1);
 	}
 	else
 	{
-		return (count((n >> 1)));
+		return (count(n >> 1));
 	}
 }
 
@@ -30,7 +30,7 @@ int count(unsigned long int n)
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int c;
+	int c;
 
 	c = n ^ m;
 
