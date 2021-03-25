@@ -35,6 +35,6 @@ void print_binary(unsigned long int n)
 	}
 	else
 	{
-	        print_binary_recursiv(n);
+		print_binary_recursiv(n);
 	}
 }
