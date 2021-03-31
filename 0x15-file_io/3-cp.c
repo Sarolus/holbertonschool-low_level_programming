@@ -23,10 +23,12 @@ void exit_code(int error, char *argv[], int fd)
 		case 99:
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			break;
 		}
-		case 100
+		case 100:
 		{
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+			break;
 		}
 	}
 
