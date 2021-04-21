@@ -44,12 +44,12 @@ void print_times_table(int n)
 			{
 				res = i * j;
 
-				if (res <= 99)
+				if (res <= 99 && j > 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
 				}
-				if (res <= 9)
+				if (res <= 9 && j > 0)
 				{
 					_putchar(' ');
 				}
