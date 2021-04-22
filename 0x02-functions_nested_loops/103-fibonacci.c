@@ -8,20 +8,20 @@
 int main(void)
 {
 	int i = 0;
-	long int res, even, n1 = 1, n2 = 2;
+	int res = 0, even = 0, n1 = 0, n2 = 1;
 
-	while (i < 33)
+	while (i < 32)
 	{
-		if (n1 % 2 == 0)
-		{
-			even += n1;
-		}
 		res = n1 + n2;
+		if (res % 2 == 0)
+		{
+			even += res;
+		}
 		n1 = n2;
 		n2 = res;
 		i++;
 	}
-	printf("%ld\n", even);
+	printf("%i\n", even);
 
 	return (0);
 }
