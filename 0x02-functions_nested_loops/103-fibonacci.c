@@ -15,15 +15,13 @@ int main(void)
 		if (n1 % 2 == 0)
 		{
 			even += n1;
-			printf("%ld", even);
 		}
-
 		res = n1 + n2;
 		n1 = n2;
 		n2 = res;
 		i++;
 	}
-	putchar('\n');
+	printf("%ld\n", even);
 
 	return (0);
 }
