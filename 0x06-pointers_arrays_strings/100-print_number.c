@@ -2,30 +2,27 @@
 
 /**
  * print_number - Prints an integer
- * @n: number
+ * @n: number passed.
+ * Return: return result.
  */
 
 void print_number(int n)
 {
-	int power;
+	unsigned int nb;
 
-	power = 1;
+	nb = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		nb = n * -1;
 	}
-
-	while (n / power > 9)
+	if (nb <= 9)
 	{
-		power = power * 10;
+		_putchar(nb + '0');
 	}
-
-	while (n > 9)
+	if (nb > 9)
 	{
-		_putchar((n / power) + '0');
-		n = n % power;
-		power = power / 10;
+		print_number(nb / 10);
+		_putchar(nb % 10 + '0');
 	}
-	_putchar(n + '0');
 }
