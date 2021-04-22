@@ -10,7 +10,7 @@ int main(void)
 	int i = 0;
 	long int res, even, n1 = 1, n2 = 2;
 
-	while (i < 31)
+	while (i < 32)
 	{
 		if (i == 1)
 		{
