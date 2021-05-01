@@ -3,19 +3,23 @@
 /**
  * print_dlistint - Prints all the lement of a double linked list.
  * @h: head node.
- * Return
+ * Return: return the length of the list.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t count = 0;
+	int i = 0;
 
 	if (h == NULL)
 	{
-		return;
+		return (0);
 	}
-	PrintList(h->next);
-	count++;
-	printf("%d\n", h->n);
 
-	return (count);
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		i++;
+		h = h->next;
+	}
+
+	return (i);
 }
